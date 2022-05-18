@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox prefHeight="300.0" prefWidth="900.0">
+         <children>
+            <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="41.0" prefWidth="378.0">
+               <children>
+                  <Label text=" Имя" />
+                  <TextField fx:id="name" prefHeight="25.0" prefWidth="127.0" />
+                  <Button mnemonicParsing="false" onAction="#createPlayer" text="Начать" />
+               </children>
+            </FlowPane>
+            <Label text="Баланс" />
+            <TextField fx:id="money" editable="false" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="view1" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Мешок.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="view2" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Мешок.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="view3" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Мешок.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="addMoney" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#onPay" text="Пополнить баланс">
+                     <opaqueInsets>
+                        <Insets left="400.0" />
+                     </opaqueInsets>
+                  </Button>
+                  <Button fx:id="restart" disable="true" mnemonicParsing="false" onAction="#restartPlay" text="Повторить">
+                     <HBox.margin>
+                        <Insets left="200.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="goplay" mnemonicParsing="false" text="Играть" onAction="#goPlayClick">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children></VBox>
+   </children>
+</Pane>
